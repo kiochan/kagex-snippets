@@ -1,0 +1,136 @@
+# THIS SNIPPETS IS CREATED BY @yaqinking IN Atom 1.11.2 FELL FREE TO MODIFY IT
+# KAGEX script auto complete
+'.source.kagex':
+    # Common command expand
+    'Position layer':
+        'prefix': 'position'
+        'body': '[position layer=$1 width=$2 height=$3]\n$4'
+    'Trans method time canskip':
+        'prefix': 'trans'
+        'body': '@trans method=$1 time=$2 canskip=false'
+    'Wait trans no skip':
+        'prefix': 'wtn'
+        'body': '@wt canskip=false\n$0'
+    'Wait with time':
+        'prefix': 'wt'
+        'body': '@wait time=$1\n$2'
+    'Jump to target':
+        'prefix': 'jump'
+        'body': '[jump target=*$1]\n$2'
+    'Message on':
+        'prefix': 'mo'
+        'body': '[msgon]\n$0'
+    'Message off':
+        'prefix': 'mf'
+        'body': '[msgoff]\n$0'
+    'Free all resources':
+        'prefix': 'fa'
+        'body': '@freeall\n$0'
+    'Next page [p]':
+        'prefix': 'p'
+        'body': '$0[p]'
+    'Next line [r] cursor position before':
+        'prefix': 'r'
+        'body': '$0[r]'
+    'Next line [r] cursor position after':
+        'prefix': 'ra'
+        'body': '[r]$0'
+
+    # Expression
+    'Eval expression':
+        'prefix': 'eval'
+        'body': '[eval exp="$1"]\n$2'
+    'Emb expression':
+        'prefix': 'emb'
+        'body': '[emb exp="$1"]\n$2'
+    # Selection
+    'Selection 2 option':
+        'prefix': 'sel2'
+        'body': """
+            [selectinit]
+            [seladd text="$1" target=*$2]
+            [seladd text="$3" target=*$4]
+            [select]\n$5
+        """
+    'Selection 3 option':
+        'prefix': 'sel3'
+        'body': """
+            [selectinit]
+            [seladd text="$1" target=*$2]
+            [seladd text="$3" target=*$4]
+            [seladd text="$5" target=*$6]
+            [select]\n$7
+        """
+
+    # Chracter name
+    'Chracter name':
+        'prefix': 'name'
+        'body': '[processname text=$1]\n$2'
+    # BGM
+    'BGM':
+        'prefix': 'bgm'
+        'body': '@bgm storage=$1\n$2'
+        'description': 'Play background music'
+    # FG
+    'Chracter image':
+        'prefix': 'fg'
+        'body': '@fg storage=$1 time=$2 layer=$3 canskip=$4\n$5'
+        'description': 'Show front chracter image'
+    # SE
+    'Play SE':
+        'prefix': 'se'
+        'body': '@playse storage=$1\n$2'
+    'Fade in SE':
+        'prefix': 'fse'
+        'body': '@fadeinse storage=$1 time=$2 loop=$3\n$4'
+    # BG
+    'Background Image':
+        'prefix': 'bg'
+        'body': '@bg storage=$1 time=$2 canskip=false\n$4'
+
+    # Resource
+    'Clear layer':
+        'prefix': 'cl'
+        'body': '@cl layer=$1 time=$2 canskip=false\n$3'
+    # Action
+    'Set Action':
+        'prefix': 'act'
+        'body': '@action layer=$1 page=back module=$2 vibration=$3 cycle=$4 time=$5\n$6'
+    'Stop Action':
+        'prefix': 'acts'
+        'body': '@stopaction'
+    # Image
+    'Set Image':
+        'prefix': 'image'
+        'body': '@image layer=$1 afx=$2 afy=$3 storage=$4 page=back top=$5 left=$6 visible=true\n$7'
+    # Emote
+    # emoe - emote option easing
+    # emvo - emote voice variable
+    'Emote option easing':
+        'prefix': 'emoe'
+        'body': '[emoteopt seg=$1 xofs=$2 time=$3 easing=$4]\n$5'
+    'Emote voice variable':
+        'prefix': 'emvo'
+        'body': '[emotevariable seg=$1 name=$2 storage=$3]\n$4'
+    # Type system
+    'Bool type: true':
+        'prefix': 't'
+        'body': 'true'
+    'Bool type: false':
+        'prefix': 'f'
+        'body': 'false'
+    # KAGEX UI Keyword
+    'UI Button':
+        'prefix': 'button'
+        'body': '[sysbutton enterse=$1 clickse=$2]\n$3'
+# TJS script auto complete
+'.source.tjs':
+    'function declare':
+        'prefix': 'func'
+        'body': 'function $1($2) {\n\t$3\n}'
+    'Bool type: true':
+        'prefix': 't'
+        'body': 'true'
+    'Bool type: false':
+        'prefix': 'f'
+'body': 'false'

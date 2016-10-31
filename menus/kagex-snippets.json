@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle kagex-snippets",
+        "command": "kagex-snippets:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "kagex-snippets",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "kagex-snippets:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

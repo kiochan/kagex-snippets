@@ -8,7 +8,7 @@
   "activationCommands": {
     "atom-workspace": "kagex-snippets:toggle"
   },
-  "repository": "https://github.com/atom/kagex-snippets",
+  "repository": "https://github.com/kiochan/kagex-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
